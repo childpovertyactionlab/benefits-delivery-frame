@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "In Dallas County",
+    "section": "",
+    "text": "123,123 potential eligible individuals are not enrolled in either EITC, SNAP, or WIC benefits, this constitutes 1 in 5 of all Dallas residents.\n    \n\n\n\n\n\n    \n        \n    \n    \n        123,123 potential eligibles are children (11.1%), that's 1 in 3 of all children in Dallas County.\n    \n\n\n\n\n\n    \n        \n    \n    \n        $123,123.00 untapped annually in EITC, SNAP, WIC benefits can be sent back into the Dallas economy."
+  },
+  {
+    "objectID": "dashboard.html",
+    "href": "dashboard.html",
+    "title": "Dallas Court Observation Project",
+    "section": "",
+    "text": "flowchart TD\n  A(Tenant receives written Notice to Vacate.) --&gt; B(Tenant given 1 or more days to move out &lt;br&gt;of rental depending on lease agreement.);\n  B --&gt; C{{Tenant moves out of rental or &lt;br&gt;resolves issue with the landlord.}}\n  B ----&gt; D(Tenant does not leave rental within &lt;br&gt;time frame dictated by Notice to Vacate.)\n  D --&gt; E(Landlord files eviction suit with &lt;br&gt;their local JP Precinct.)\n  E --&gt; F(Hearing is scheduled at least 10 days &lt;br&gt;after eviction filing is made.)\n  F --&gt; G(Case is heard at JP court.)\n  G --&gt; H(((Eviction Judgement)))\n  H --&gt; I{{Case is dismissed.}}\n  H --&gt; J{{Ruled in favor of the tenant.}}\n  H --&gt; K(Ruled in favor of the landlord.)\n  H --&gt; L(Case is abated or rescheduled.)\n  H --&gt; M(Other outcome.)\n  K --&gt; N(Tenant may appeal the case within 5 days.)\n  K ----&gt; O(The tenant does not appeal and &lt;br&gt;fails to move out.)\n  O --&gt; P(Landlord may obtain a Writ of Possession &lt;br&gt;from the Justice of the Peace.)\n  P --&gt; Q(Constable posts a 24-hour notice before executing writ.)\n  Q --&gt; R{{Constable executes writ and begins removing the tenant's property.}}\n\n\n\n\n\n\nAbout CPAL\nCPAL is a Dallas-based nonprofit organization committed to cutting child poverty in Dallas, Texas in half within a generation by (1) generating relevant data insights to break big problems into small, actionable ones, (2) facilitating cross-sector, collective action based on data insights, and (3) applying principles of human-centered design to solve problems in partnership with communities. One of CPAL’s five areas of focus is housing, and CPAL’s long-term aspiration is to ensure all Dallas families have access to stable housing without worry of an involuntary move."
+  },
+  {
+    "objectID": "myths.html",
+    "href": "myths.html",
+    "title": "Dallas Court Observation Project",
+    "section": "",
+    "text": "flowchart TD\n  A(Tenant receives written Notice to Vacate.) --&gt; B(Tenant given 1 or more days to move out &lt;br&gt;of rental depending on lease agreement.);\n  B --&gt; C{{Tenant moves out of rental or &lt;br&gt;resolves issue with the landlord.}}\n  B ----&gt; D(Tenant does not leave rental within &lt;br&gt;time frame dictated by Notice to Vacate.)\n  D --&gt; E(Landlord files eviction suit with &lt;br&gt;their local JP Precinct.)\n  E --&gt; F(Hearing is scheduled at least 10 days &lt;br&gt;after eviction filing is made.)\n  F --&gt; G(Case is heard at JP court.)\n  G --&gt; H(((Eviction Judgement)))\n  H --&gt; I{{Case is dismissed.}}\n  H --&gt; J{{Ruled in favor of the tenant.}}\n  H --&gt; K(Ruled in favor of the landlord.)\n  H --&gt; L(Case is abated or rescheduled.)\n  H --&gt; M(Other outcome.)\n  K --&gt; N(Tenant may appeal the case within 5 days.)\n  K ----&gt; O(The tenant does not appeal and &lt;br&gt;fails to move out.)\n  O --&gt; P(Landlord may obtain a Writ of Possession &lt;br&gt;from the Justice of the Peace.)\n  P --&gt; Q(Constable posts a 24-hour notice before executing writ.)\n  Q --&gt; R{{Constable executes writ and begins removing the tenant's property.}}\n\n\n\n\n\n\nAbout CPAL\nCPAL is a Dallas-based nonprofit organization committed to cutting child poverty in Dallas, Texas in half within a generation by (1) generating relevant data insights to break big problems into small, actionable ones, (2) facilitating cross-sector, collective action based on data insights, and (3) applying principles of human-centered design to solve problems in partnership with communities. One of CPAL’s five areas of focus is housing, and CPAL’s long-term aspiration is to ensure all Dallas families have access to stable housing without worry of an involuntary move."
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Dallas Court Observation Project",
+    "section": "",
+    "text": "flowchart TD\n  A(Tenant receives written Notice to Vacate.) --&gt; B(Tenant given 1 or more days to move out &lt;br&gt;of rental depending on lease agreement.);\n  B --&gt; C{{Tenant moves out of rental or &lt;br&gt;resolves issue with the landlord.}}\n  B ----&gt; D(Tenant does not leave rental within &lt;br&gt;time frame dictated by Notice to Vacate.)\n  D --&gt; E(Landlord files eviction suit with &lt;br&gt;their local JP Precinct.)\n  E --&gt; F(Hearing is scheduled at least 10 days &lt;br&gt;after eviction filing is made.)\n  F --&gt; G(Case is heard at JP court.)\n  G --&gt; H(((Eviction Judgement)))\n  H --&gt; I{{Case is dismissed.}}\n  H --&gt; J{{Ruled in favor of the tenant.}}\n  H --&gt; K(Ruled in favor of the landlord.)\n  H --&gt; L(Case is abated or rescheduled.)\n  H --&gt; M(Other outcome.)\n  K --&gt; N(Tenant may appeal the case within 5 days.)\n  K ----&gt; O(The tenant does not appeal and &lt;br&gt;fails to move out.)\n  O --&gt; P(Landlord may obtain a Writ of Possession &lt;br&gt;from the Justice of the Peace.)\n  P --&gt; Q(Constable posts a 24-hour notice before executing writ.)\n  Q --&gt; R{{Constable executes writ and begins removing the tenant's property.}}\n\n\n\n\n\n\nAbout CPAL\nCPAL is a Dallas-based nonprofit organization committed to cutting child poverty in Dallas, Texas in half within a generation by (1) generating relevant data insights to break big problems into small, actionable ones, (2) facilitating cross-sector, collective action based on data insights, and (3) applying principles of human-centered design to solve problems in partnership with communities. One of CPAL’s five areas of focus is housing, and CPAL’s long-term aspiration is to ensure all Dallas families have access to stable housing without worry of an involuntary move."
+  },
+  {
+    "objectID": "index.html#healthier-families",
+    "href": "index.html#healthier-families",
+    "title": "In Dallas County",
+    "section": "Healthier Families",
+    "text": "Healthier Families\n30% reduction in food insecurity\nHere’s a sentence telling us why food insecurity is bad.\n35% reduction in overall healthcare costs\nThis sentence tells us that individuals are less burdened because of healthcare costs.\n18% increase in high school completion\nNow I’m telling you why it’s important that higher high school completion rates leads to better social mobility."
+  },
+  {
+    "objectID": "index.html#healthier-economy",
+    "href": "index.html#healthier-economy",
+    "title": "In Dallas County",
+    "section": "Healthier Economy",
+    "text": "Healthier Economy\n$1,120,000 back into the Dallas County\nBenefits to sales, property ownership, and income taxes.\n$1.79 in economic activity\ngenerated for every dollar in SNAP benefits.\n13,560 new jobs\nAre generated with additional $1B in SNAP benefits in the agriculture and transportation industries."
+  },
+  {
+    "objectID": "dashboard.html#problem-statement",
+    "href": "dashboard.html#problem-statement",
+    "title": "ABOUT THIS TOOL",
+    "section": "Problem Statement",
+    "text": "Problem Statement\nAt the highest level, we know there are over $80B in public assistance benefit that not distributed each year in the United States, however we currently lack the ability to determine the scale of the problem at a granular level across the country. In order to close the benefits delivery gap and optimize allocated dollars in Dallas, we must first build a better, more granular view of the scale of need across various benefits and geographic “hotspots” to prioritze strategies that improve benefits uptake."
+  },
+  {
+    "objectID": "dashboard.html#the-goal-of-the-tool",
+    "href": "dashboard.html#the-goal-of-the-tool",
+    "title": "ABOUT THIS TOOL",
+    "section": "The Goal of the Tool",
+    "text": "The Goal of the Tool\nThe goal of this tool is to understand and visualize the scale of the benefits delivery and utilization gap across benefits, including SNAP, WIC, EITC, Medicaid, etc.. Ultimately, this knowledge and will inform targeted action by multiple audiences: for-profit entities, grassroots organizations/philanthropy, and policymakers."
+  },
+  {
+    "objectID": "dashboard.html#navigating-the-tool",
+    "href": "dashboard.html#navigating-the-tool",
+    "title": "ABOUT THIS TOOL",
+    "section": "Navigating the Tool",
+    "text": "Navigating the Tool\nxxx"
+  }
+]

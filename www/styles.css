@@ -1,0 +1,19 @@
+.section-container {
+    display: flex; /* This line enables flexbox */
+    justify-content: space-around; /* This distributes space evenly around items */
+    align-items: center; /* This vertically aligns items in the middle */
+}
+
+.section {
+    text-align: center;
+}
+
+.section img, .section .icon {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Adjust as needed */
+}
+
+.section-text {
+    margin-top: 10px;
+}

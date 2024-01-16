@@ -1,0 +1,290 @@
+---
+title: "In Dallas County"
+format:
+  html:
+    includes:
+      in_header: styles.css
+                 header.html
+---
+
+```{r, Data Inputs}
+#| include: FALSE
+library(cpaltemplates)
+library(tidycensus)
+library(tidyverse)
+library(rio)
+library(sf)
+library(googlesheets4)
+library(DT)
+library(grid)
+library(gridExtra)
+
+libDB <- "C:/Users/Michael/CPAL Dropbox/"
+
+googlesheets4::gs4_auth(email = "michael@childpovertyactionlab.org")
+
+# Load ggplot2
+library(ggplot2)
+
+# Create data
+data <- data.frame(
+  name=c("A","B","C","D","E") ,  
+  value=c(0.8,0.7,0.4,0.2, 0.6)
+  )
+```
+
+:::: {.columns}
+::: {.column width="30%"}
+
+```{=html}
+<div class="section-container">
+    <div class="section" style="text-align: center;">
+        <i class="fas fa-people-group" style="font-size: 5em; color: #008097;"></i>
+    </div>
+    <div class="section-text">
+        <b>123,123</b> potential eligible individuals are not enrolled in either EITC, SNAP, or WIC benefits, this constitutes 1 in 5 of all Dallas residents.
+    </div>
+</div>
+```
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="30%"}
+```{=html}
+<div class="section-container">
+    <div class="section" style="text-align: center;">
+        <i class="fas fa-baby" style="font-size: 5em; color: #008097;"></i>
+    </div>
+    <div class="section-text">
+        <b>123,123</b> potential eligibles are children (11.1%), that's 1 in 3 of all children in Dallas County.
+    </div>
+</div>
+```
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="30%"}
+```{=html}
+<div class="section-container">
+    <div class="section" style="text-align: center;">
+        <i class="fas fa-money-bill-wave" style="font-size: 5em; color: #008097;"></i>
+    </div>
+    <div class="section-text">
+        <b>$123,123.00</b> untapped annually in EITC, SNAP, WIC benefits can be sent back into the Dallas economy.
+    </div>
+</div>
+```
+:::
+::::
+
+#  What would Dallas look like if everyone eligible received their benefits?
+:::: {.columns}
+::: {.column width="50%"}
+## Healthier Families
+**<span style="font-size: 1.2em; color: #008097;">30% reduction in food insecurity</span>**
+
+Here's a sentence telling us why food insecurity is bad.
+
+**<span style="font-size: 1.2em; color: #008097;">35% reduction in overall healthcare costs</span>**
+
+This sentence tells us that individuals are less burdened because of healthcare costs.
+
+**<span style="font-size: 1.2em; color: #008097;">18% increase in high school completion</span>**
+
+Now I'm telling you why it's important that higher high school completion rates leads to better social mobility.
+:::
+::: {.column width="50%"}
+## Healthier Economy
+**<span style="font-size: 1.2em; color: #ed018c;">$1,120,000 back into the Dallas County</span>** 
+
+Benefits to sales, property ownership, and income taxes.
+
+**<span style="font-size: 1.2em; color: #ed018c;">$1.79 in economic activity</span>** 
+
+generated for every dollar in SNAP benefits.
+
+**<span style="font-size: 1.2em; color: #ed018c;">13,560 new jobs</span>**
+
+Are generated with additional $1B in SNAP benefits in the agriculture and transportation industries.
+:::
+::: {.column width="50%"}
+```{r}
+ggplot(data, aes(x=name, y=value)) + 
+  geom_bar(stat = "identity",
+           fill = palette_cpal_main[2]) +
+  coord_flip() +
+  labs(title = "Benefits Utilization($)",
+       y = "",
+       x = "") +
+  theme_cpal_print()
+```
+:::
+::: {.column width="50%"}
+```{r}
+ggplot(data, aes(x=name, y=value)) + 
+  geom_bar(stat = "identity",
+           fill = palette_cpal_main[5]) +
+  coord_flip() +
+  labs(title = "Benefits Utilization(Individuals)",
+       y = "",
+       x = "") +
+  theme_cpal_print()
+```
+:::
+# Here's a header telling me what WIC is.
+::: {.column width="50%"}
+Only **<span style="color: #ed018c;">12.3%</span>** of eligible participants receive WIC support in Dallas County. There is are additional **<span style="color: #ed018c;">123,123</span>** people eligible and **<span style="color: #ed018c;">$123,123</span>** untapped annually.
+
+:::{.shadecontent}
+{{< fa house-chimney size=lg title="Housing" >}} **Why this matters**: WIC (Special Supplemental Nutrition Program for Women, Infants, and Children) are proven to improve children's health outcome, **<span style="color: #ed018c;">reduce child malnutrition, and save an extra $1,863</span>** in health care expenditures a year.
+:::
+
+[Click here to learn more about resources and eligibilty.](https://quarto.org)
+:::
+::: {.column width="20%"}
+```{r}
+# Assuming 'data' is your dataframe and it has columns 'name' and 'value'
+data %>%
+  filter(name == "A") %>%
+  mutate(remaining = 1 - value) %>%  # Calculate the remaining space
+  ggplot(aes(x = name)) +
+  geom_bar(aes(y = -value, fill = "your_value"), stat = "identity", width = 0.3) +
+  geom_bar(aes(y = -remaining, fill = "remaining"), stat = "identity", width = 0.3) +
+  scale_fill_manual(values = c(your_value = palette_cpal_main[5], remaining = palette_cpal_gray[1])) +
+  geom_text(aes(y = -value, label = value), 
+            vjust = -3, 
+            size = 12) +  # Adjust 'size' as needed
+  theme_void() +
+  coord_cartesian(ylim = c(-1, 0)) +  # Adjust Y limits for inverted plot
+  guides(fill = "none")  # Remove the legend
+```
+:::
+::: {.column width="15%"}
+```{=html}
+<div class="section-container">
+    <div class="section">
+        <i class="fas fa-people-group" style="font-size: 2em; color: #000000;"></i>
+    </div>
+    <div class="section-text">
+        <b>123,123 <br>Eligible Participants</b>
+    </div>
+</div>
+
+<!-- Second section-container starts here -->
+<div class="section-container">
+    <div class="section">
+        <!-- Modify the icon or style as needed -->
+        <i class="fas fa-money-bill-wave" style="font-size: 2em; color: #000000;"></i>
+    </div>
+    <div class="section-text">
+        <!-- Modify the text as needed -->
+        <b>$456,456 <br>Estimated Dollars Available</b>
+    </div>
+</div>
+```
+:::
+::: {.column width="15%"}
+```{=html}
+<div class="section-container">
+    <div class="section">
+        <i class="fas fa-people-group" style="font-size: 2em; color: #000000;"></i>
+    </div>
+    <div class="section-text">
+        <b>123,123 <br>Actual Participants</b>
+    </div>
+</div>
+
+<!-- Second section-container starts here -->
+<div class="section-container">
+    <div class="section">
+        <!-- Modify the icon or style as needed -->
+        <i class="fas fa-money-bill-wave" style="font-size: 2em; color: #000000;"></i>
+    </div>
+    <div class="section-text">
+        <!-- Modify the text as needed -->
+        <b>$456,456 <br>Dollars Allocated</b>
+    </div>
+</div>
+```
+:::
+# Here's a header telling me what SNAP` is.
+::: {.column width="50%"}
+Only **<span style="color: #ffa13e;">12.3%</span>** of eligible participants receive WIC support in Dallas County. There is are additional **<span style="color: #ffa13e;">123,123</span>** people eligible and **<span style="color: #ffa13e;">$123,123</span>** untapped annually.
+
+:::{.shadecontent}
+{{< fa house-chimney size=lg title="Housing" >}} **Why this matters**: WIC (Special Supplemental Nutrition Program for Women, Infants, and Children) are proven to improve children's health outcome, **<span style="color: #ffa13e;">reduce child malnutrition, and save an extra $1,863</span>** in health care expenditures a year.
+:::
+
+[Click here to learn more about resources and eligibilty.](https://quarto.org)
+:::
+::: {.column width="20%"}
+```{r}
+# Assuming 'data' is your dataframe and it has columns 'name' and 'value'
+data %>%
+  filter(name == "A") %>%
+  mutate(remaining = 1 - value) %>%  # Calculate the remaining space
+  ggplot(aes(x = name)) +
+  geom_bar(aes(y = -value, fill = "your_value"), stat = "identity", width = 0.3) +
+  geom_bar(aes(y = -remaining, fill = "remaining"), stat = "identity", width = 0.3) +
+  scale_fill_manual(values = c(your_value = palette_cpal_main[7], remaining = palette_cpal_gray[1])) +
+  geom_text(aes(y = -value, label = value), 
+            vjust = -3, 
+            size = 12) +  # Adjust 'size' as needed
+  theme_void() +
+  coord_cartesian(ylim = c(-1, 0)) +  # Adjust Y limits for inverted plot
+  guides(fill = "none")  # Remove the legend
+```
+:::
+::: {.column width="15%"}
+```{=html}
+<div class="section-container">
+    <div class="section">
+        <i class="fas fa-people-group" style="font-size: 2em; color: #000000;"></i>
+    </div>
+    <div class="section-text">
+        <b>123,123 <br>Eligible Participants</b>
+    </div>
+</div>
+
+<!-- Second section-container starts here -->
+<div class="section-container">
+    <div class="section">
+        <!-- Modify the icon or style as needed -->
+        <i class="fas fa-money-bill-wave" style="font-size: 2em; color: #000000;"></i>
+    </div>
+    <div class="section-text">
+        <!-- Modify the text as needed -->
+        <b>$456,456 <br>Estimated Dollars Available</b>
+    </div>
+</div>
+```
+:::
+::: {.column width="15%"}
+```{=html}
+<div class="section-container">
+    <div class="section">
+        <i class="fas fa-people-group" style="font-size: 2em; color: #000000;"></i>
+    </div>
+    <div class="section-text">
+        <b>123,123 <br>Actual Participants</b>
+    </div>
+</div>
+
+<!-- Second section-container starts here -->
+<div class="section-container">
+    <div class="section">
+        <!-- Modify the icon or style as needed -->
+        <i class="fas fa-money-bill-wave" style="font-size: 2em; color: #000000;"></i>
+    </div>
+    <div class="section-text">
+        <!-- Modify the text as needed -->
+        <b>$456,456 <br>Dollars Allocated</b>
+    </div>
+</div>
+```
+:::
+::::
+
+# About CPAL
+CPAL is a Dallas-based nonprofit organization committed to cutting child poverty in
+Dallas, Texas in half within a generation by (1) generating relevant data insights to break big problems into small, actionable ones, (2) facilitating cross-sector, collective action based on data insights, and (3) applying principles of human-centered design to solve problems in partnership with communities. One of CPAL’s five areas of focus is housing, and CPAL’s long-term aspiration is to ensure all Dallas families have access to stable housing without worry of an involuntary move.

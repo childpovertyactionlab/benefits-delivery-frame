@@ -1,0 +1,21 @@
+---
+title: "ABOUT THIS TOOL"
+grid:
+  sidebar-width: 150px
+  body-width: 1200px
+  margin-width: 150px
+---
+
+```{=html}
+<iframe id="example1" src="https://cpal.shinyapps.io/poverty-explore-dallas/" style="border: none; width: 100%; height: 100vh" frameborder="0"></iframe>
+```
+
+
+## Problem Statement
+At the highest level, we know there are over $80B in public assistance benefit that not distributed each year in the United States, however we currently lack the ability to determine the scale of the problem at a granular level across the country. In order to close the benefits delivery gap and optimize allocated dollars in Dallas, we must first build a better, more granular view of the scale of need across various benefits and geographic "hotspots" to prioritze strategies that improve benefits uptake.
+
+## The Goal of the Tool
+The goal of this tool is to understand and visualize the scale of the benefits delivery and utilization gap across benefits, including SNAP, WIC, EITC, Medicaid, etc.. Ultimately, this knowledge and will inform targeted action by multiple audiences: for-profit entities, grassroots organizations/philanthropy, and policymakers.
+
+## Navigating the Tool
+xxx

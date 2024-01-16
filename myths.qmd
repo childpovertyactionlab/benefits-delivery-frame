@@ -1,0 +1,48 @@
+---
+title: "Dallas Court Observation Project"
+---
+
+```{r, Data Inputs}
+#| include: FALSE
+library(cpaltemplates)
+library(tidycensus)
+library(tidyverse)
+library(rio)
+library(sf)
+library(googlesheets4)
+library(DT)
+library(grid)
+library(gridExtra)
+
+libDB <- "C:/Users/Michael/CPAL Dropbox/"
+
+googlesheets4::gs4_auth(email = "michael@childpovertyactionlab.org")
+
+```
+
+```{mermaid}
+%%| fig-width: 9
+%%| fig-height: 12
+flowchart TD
+  A(Tenant receives written Notice to Vacate.) --> B(Tenant given 1 or more days to move out <br>of rental depending on lease agreement.);
+  B --> C{{Tenant moves out of rental or <br>resolves issue with the landlord.}}
+  B ----> D(Tenant does not leave rental within <br>time frame dictated by Notice to Vacate.)
+  D --> E(Landlord files eviction suit with <br>their local JP Precinct.)
+  E --> F(Hearing is scheduled at least 10 days <br>after eviction filing is made.)
+  F --> G(Case is heard at JP court.)
+  G --> H(((Eviction Judgement)))
+  H --> I{{Case is dismissed.}}
+  H --> J{{Ruled in favor of the tenant.}}
+  H --> K(Ruled in favor of the landlord.)
+  H --> L(Case is abated or rescheduled.)
+  H --> M(Other outcome.)
+  K --> N(Tenant may appeal the case within 5 days.)
+  K ----> O(The tenant does not appeal and <br>fails to move out.)
+  O --> P(Landlord may obtain a Writ of Possession <br>from the Justice of the Peace.)
+  P --> Q(Constable posts a 24-hour notice before executing writ.)
+  Q --> R{{Constable executes writ and begins removing the tenant's property.}}
+```
+
+# About CPAL
+CPAL is a Dallas-based nonprofit organization committed to cutting child poverty in
+Dallas, Texas in half within a generation by (1) generating relevant data insights to break big problems into small, actionable ones, (2) facilitating cross-sector, collective action based on data insights, and (3) applying principles of human-centered design to solve problems in partnership with communities. One of CPAL’s five areas of focus is housing, and CPAL’s long-term aspiration is to ensure all Dallas families have access to stable housing without worry of an involuntary move.
