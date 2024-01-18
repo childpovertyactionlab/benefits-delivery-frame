@@ -131,7 +131,10 @@ ggplot(data, aes(x=name, y=value)) +
   theme_cpal_print()
 ```
 :::
+::::
+
 # Here's a header telling me what WIC is.
+:::: {.columns}
 ::: {.column width="50%"}
 Only **<span style="color: #ed018c;">12.3%</span>** of eligible participants receive WIC support in Dallas County. There is are additional **<span style="color: #ed018c;">123,123</span>** people eligible and **<span style="color: #ed018c;">$123,123</span>** untapped annually.
 
@@ -207,7 +210,10 @@ data %>%
 </div>
 ```
 :::
+::::
+
 # Here's a header telling me what SNAP` is.
+:::: {.columns}
 ::: {.column width="50%"}
 Only **<span style="color: #ffa13e;">12.3%</span>** of eligible participants receive WIC support in Dallas County. There is are additional **<span style="color: #ffa13e;">123,123</span>** people eligible and **<span style="color: #ffa13e;">$123,123</span>** untapped annually.
 
